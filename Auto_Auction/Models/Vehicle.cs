@@ -17,7 +17,7 @@ public abstract class Vehicle
     public string Fuel { get; set; }
     public string EnergyClass { get; set; }
 
-    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, string distanceByFuel, string fuel, string energyCLass)
+    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, string distanceByFuel, string fuel, string energyClass)
     {
         Id = id;
         Name = name;
