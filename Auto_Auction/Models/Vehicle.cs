@@ -15,7 +15,7 @@ public abstract class Vehicle
     // Km/L
     public string DistanceByFuel { get; set; }
     public string Fuel { get; set; }
-    public string EnergyCLass { get; set; }
+    public string EnergyClass { get; set; }
 
     protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, string distanceByFuel, string fuel, string energyCLass)
     {
@@ -30,6 +30,11 @@ public abstract class Vehicle
         MotorSize = motorSize;
         DistanceByFuel = distanceByFuel;
         Fuel = fuel;
-        EnergyCLass = energyCLass;
+        EnergyClass = energyClass;
+    }
+
+    public override string ToString()
+    {
+        return $"Id: {Id}, Name: {Name}, Distance: {Distance}, RegistrationNumber: {RegistrationNumber}, Year: {Year}, TowHook: {TowHook}, VehicleType: {VehicleType}, LicenceType: {LicenceType}, Motor: {MotorSize}, DistanceByFuel: {DistanceByFuel}, Fuel: {Fuel}, EnergyClass {EnergyClass}";
     }
 }
