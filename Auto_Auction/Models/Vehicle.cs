@@ -1,6 +1,6 @@
 namespace Auto_Auction.Models;
 
-public class Vehicle
+public abstract class Vehicle
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -17,7 +17,7 @@ public class Vehicle
     public string Fuel { get; set; }
     public string EnergyCLass { get; set; }
 
-    public Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, string distanceByFuel, string fuel, string energyCLass)
+    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, string distanceByFuel, string fuel, string energyCLass)
     {
         Id = id;
         Name = name;
