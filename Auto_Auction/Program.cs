@@ -11,6 +11,7 @@ sealed class Program
     [STAThread]
     public static void Main(string[] args)
     {
+        //it will test database connection before building avalonia
         Database.TestConnection();
         BuildAvaloniaApp()
         .StartWithClassicDesktopLifetime(args);

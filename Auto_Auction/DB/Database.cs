@@ -5,7 +5,7 @@ using Microsoft.Data.SqlClient;
 
 namespace Auto_Auction.DB
 {
-    public class Database
+    public partial class Database
     {
         private static SqlConnection GetConnection()
         {
