@@ -2,11 +2,6 @@ using System.Globalization;
 
 namespace Auto_Auction.Models;
 
-// Shared fuel type enum used across models
-public enum FuelTypeEnum { Diesel, Petrol, Electric, Hydrogen }
-
-// Energy class enum — method will return this instead of strings.
-public enum EnergyClassEnum { A, B, C, D, Unknown }
 
 public class GetEnergyClass
 {

@@ -44,7 +44,7 @@ public enum FuelTypeEnum
     Petrol,
     Diesel,
     Electric,
-    Hybrid
+    Hydrogen
 }
 
 public enum EnergyClassEnum
@@ -53,7 +53,5 @@ public enum EnergyClassEnum
     B,
     C,
     D,
-    E,
-    F,
-    G
+    Unknown
 }
