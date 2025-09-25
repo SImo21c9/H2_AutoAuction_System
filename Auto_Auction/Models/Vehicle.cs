@@ -13,11 +13,11 @@ public abstract class Vehicle
     public string LicenceType { get; set; }
     public string MotorSize { get; set; }
     // Km/L
-    public string DistanceByFuel { get; set; }
-    public string Fuel { get; set; }
-    public string EnergyClass { get; set; }
+    public double DistanceByFuel { get; set; }
+    public FuelTypeEnum Fuel { get; set; }
+    public EnergyClassEnum EnergyClass { get; set; }
 
-    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, string distanceByFuel, string fuel, string energyClass)
+    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, double distanceByFuel, FuelTypeEnum fuel, EnergyClassEnum energyClass)
     {
         Id = id;
         Name = name;
@@ -37,4 +37,23 @@ public abstract class Vehicle
     {
         return $"Id: {Id}, Name: {Name}, Distance: {Distance}, RegistrationNumber: {RegistrationNumber}, Year: {Year}, TowHook: {TowHook}, VehicleType: {VehicleType}, LicenceType: {LicenceType}, Motor: {MotorSize}, DistanceByFuel: {DistanceByFuel}, Fuel: {Fuel}, EnergyClass {EnergyClass}";
     }
+}
+
+public enum FuelTypeEnum
+{
+    Petrol,
+    Diesel,
+    Electric,
+    Hybrid
+}
+
+public enum EnergyClassEnum
+{
+    A,
+    B,
+    C,
+    D,
+    E,
+    F,
+    G
 }
