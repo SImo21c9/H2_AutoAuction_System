@@ -28,7 +28,7 @@ namespace Auto_Auction.Models
             int year,
             bool towHook,
             string vehicleType,
-            string motorSize,
+            double motorSize,
             double distanceByFuel,
             FuelTypeEnum fuel,
             EnergyClassEnum energyClass,

@@ -10,14 +10,14 @@ public abstract class Vehicle
     public int Year { get; set; }
     public bool TowHook { get; set; }
     public string VehicleType { get; set; } 
-    public string LicenceType { get; set; }
-    public string MotorSize { get; set; }
+    public virtual string LicenceType { get; set; }
+    public double MotorSize { get; set; }
     // Km/L
     public double DistanceByFuel { get; set; }
     public FuelTypeEnum Fuel { get; set; }
     public EnergyClassEnum EnergyClass { get; set; }
 
-    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, string motorSize, double distanceByFuel, FuelTypeEnum fuel, EnergyClassEnum energyClass)
+    protected Vehicle(int id, string name, double distance, int registrationNumber, int year, bool towHook, string vehicleType, string licenceType, double motorSize, double distanceByFuel, FuelTypeEnum fuel, EnergyClassEnum energyClass)
     {
         Id = id;
         Name = name;
