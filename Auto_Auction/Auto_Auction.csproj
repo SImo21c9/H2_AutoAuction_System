@@ -27,6 +27,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Users\" />
+      <Folder Include="Models\Users\" />
     </ItemGroup>
 </Project>
