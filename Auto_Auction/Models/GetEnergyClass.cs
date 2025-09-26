@@ -9,7 +9,7 @@ public class GetEnergyClass
     public int Year { get; set; }
     public double DistanceByFuel { get; set; }
 
-    // Return the energy class as an enum to avoid string-based errors
+   
     public EnergyClassEnum EnergyClass()
     {
         switch (FuelType)
