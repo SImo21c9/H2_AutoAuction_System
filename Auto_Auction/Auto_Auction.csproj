@@ -25,8 +25,4 @@
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
         <PackageReference Include="Microsoft.Data.SqlClient" Version="7.0.0-preview1.25257.1" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="SQLQueries\" />
-    </ItemGroup>
 </Project>

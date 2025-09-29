@@ -10,8 +10,9 @@ public abstract class User : IValidate
     public string Password { get; set; }
 
     public bool IsCorp => this is CorporateUser;
+    public bool CanSell => this is Seller; 
     public int PostalCode { get; set; }
-
+    
     public User(int id, string userName, string password, int postalCode )
     {
         Id = id;
@@ -19,6 +20,8 @@ public abstract class User : IValidate
         Password = password;
         PostalCode = postalCode;
     }
+
+    
 
     public void Validate()
     {

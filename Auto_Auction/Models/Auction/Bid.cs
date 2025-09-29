@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Auto_Auction.Models.Users;
 
 namespace Auto_Auction.Models
 {
@@ -24,7 +25,7 @@ namespace Auto_Auction.Models
 
         public override string ToString()
         {
-            return $"{Buyer.Name} bid {Amount:C} at {Timestamp}";
+            return $"{Buyer.UserName} bid {Amount:C} at {Timestamp}";
         }
     }
 }

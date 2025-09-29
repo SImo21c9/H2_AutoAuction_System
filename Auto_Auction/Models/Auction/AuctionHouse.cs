@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using Auto_Auction.Models.Users;
 
 namespace Auto_Auction.Models
 {
@@ -53,7 +54,7 @@ namespace Auto_Auction.Models
             if (amount >= auction.MinimumPrice)
             {
                 auction.Seller.ReceiveBidNotification(
-                    $"Auction {auction.Id}: New interesting bid of {amount:C} from {buyer.Name}");
+                    $"Auction {auction.Id}: New interesting bid of {amount:C} from {buyer.UserName}");
             }
 
             return true;
