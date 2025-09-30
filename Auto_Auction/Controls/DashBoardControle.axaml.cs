@@ -24,6 +24,7 @@ public partial class DashBoardControle : UserControl
     {
         if (sender is DataGrid dataGrid && dataGrid.SelectedItem is Auto_Auction.Models.Auction auction)
         {
+            //dataGrid.SelectedItem
             Console.WriteLine("OtherAuctions ");
             dataGrid.SelectedItem = null;
         }
