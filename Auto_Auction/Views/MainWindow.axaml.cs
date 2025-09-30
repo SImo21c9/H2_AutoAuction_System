@@ -17,7 +17,9 @@ public partial class MainWindow : Window
 
     public void NavigateToUser()
     {
-        MainContent.Content = new CreateUserView();
+        MainContent.Content = new CreateUserView(this);
     }
+
     
+
 }

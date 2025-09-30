@@ -11,9 +11,10 @@ namespace Auto_Auction.Controls;
 public partial class CreateUserView : UserControl
 {
     private MainWindow _mainwindow;
-    public CreateUserView()
+    public CreateUserView(MainWindow mainWindow)
     {
         InitializeComponent();
+        _mainwindow = mainWindow;
     }
 
     private void RegisterUser(object? sender, RoutedEventArgs e)
@@ -24,15 +25,26 @@ public partial class CreateUserView : UserControl
         var VCR = VCRBox;
         var Credit = CreditBox;
         
-        if(!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password) && !string.IsNullOrEmpty(Passwordagain))
+        if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password) || string.IsNullOrEmpty(Passwordagain))
         {
-            throw new Exception("All field must be filled");
+            
+            throw new Exception("All fields must be filled");
         }
+
+        if (Password != Passwordagain)
+        {
+            
+            throw new Exception("Passwords do not match");
+        }
+
+        _mainwindow.MainContent.Content = new DashBoardControle();
     }
+    
 
     private void Cancel(object? sender, RoutedEventArgs e)
     {
-        
+        _mainwindow.MainContent.Content = new LoginView(_mainwindow);
     }
-    
+
+
 }
