@@ -8,7 +8,12 @@
         x:Class="Auto_Auction.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Auto_Auction">
+        Title="Auto_Auction"
+        Width="1000"
+        Height="700"
+        
+        >
+    
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
