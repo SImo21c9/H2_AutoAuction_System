@@ -2,10 +2,10 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
+/.idea.Auto_Auction.iml
 /contentModel.xml
 /modules.xml
 /projectSettingsUpdater.xml
-/.idea.Auto_Auction.iml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
