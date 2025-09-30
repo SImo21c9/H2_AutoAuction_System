@@ -64,7 +64,7 @@ namespace Auto_Auction.Controls
         }
         private void NavigateToDashboard()
         {
-            _mainWindow.MainContent.Content = new DashBoardControle();
+            _mainWindow.NavigateToDashboard();
         }
     }
 }
