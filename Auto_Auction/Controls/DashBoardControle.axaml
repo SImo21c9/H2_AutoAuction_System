@@ -3,9 +3,77 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="Auto_Auction.Controls.DashBoardControle">
-    <TextBlock Text="Welcome to the Dashboard!"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               FontSize="20"/>
+             x:Class="Auto_Auction.Controls.DashBoardControle"
+             xmlns:vm="clr-namespace:Auto_Auction.ViewModels"
+             x:DataType="vm:DashBoardViewModel">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>   
+            <RowDefinition Height="1*"/>     
+            <RowDefinition Height="Auto"/>   
+            <RowDefinition Height="2*"/>    
+        </Grid.RowDefinitions>
+
+       
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Your auctions" Margin="10,10,10,0" FontWeight="Bold"/>
+
+       
+        <DataGrid Grid.Column="0" Grid.Row="1" Margin="10,0,10,10"
+                  ItemsSource="{Binding UserAuctions}" 
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="All"
+                  IsReadOnly="True">
+            <DataGrid.Styles>
+                <Style Selector="TextBlock">
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Styles>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Vehicle.Name}" Width="*" />
+                <DataGridTextColumn Header="Year" Binding="{Binding Vehicle.Year}" Width="*"/>
+                <DataGridTextColumn Header="Bid" Binding="{Binding HighestBid.Amount, FallbackValue=No bids}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Current auctions" Margin="10,10,10,0" FontWeight="Bold"/>
+
+        
+        <DataGrid Grid.Column="0" Grid.Row="3" Margin="10,0,10,10"
+                  ItemsSource="{Binding UserAuctions}" 
+                  AutoGenerateColumns="False"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="All"
+                  IsReadOnly="True">
+            <DataGrid.Styles>
+                <Style Selector="TextBlock">
+                    <Setter Property="TextAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Styles>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Vehicle.Name}" Width="*" />
+                <DataGridTextColumn Header="Year" Binding="{Binding Vehicle.Year}" Width="*"/>
+                <DataGridTextColumn Header="Bid" Binding="{Binding HighestBid.Amount, FallbackValue=No bids}" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+      
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Margin="10"
+                    Spacing="10">
+            <Button Content="+ Set for sale" Width="120" Background="Green"/>
+            <Button Content="User profile" Width="120"/>
+            <Button Content="Bid History" Width="120"/>
+            <Button Content="All Auctions" Width="120"/>
+        </StackPanel>
+    </Grid>
 </UserControl>

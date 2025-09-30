@@ -9,5 +9,6 @@ public partial class DashBoardControle : UserControl
     public DashBoardControle()
     {
         InitializeComponent();
+        DataContext = new Auto_Auction.ViewModels.DashBoardViewModel();
     }
 }
