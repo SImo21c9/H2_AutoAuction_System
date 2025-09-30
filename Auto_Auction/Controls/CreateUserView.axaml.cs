@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace Auto_Auction.Controls;
 
-public partial class CreateUser : UserControl
+public partial class CreateUserView : UserControl
 {
-    public CreateUser()
+    public CreateUserView()
     {
         InitializeComponent();
     }

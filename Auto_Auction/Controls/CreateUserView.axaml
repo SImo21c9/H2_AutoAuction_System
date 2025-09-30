@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Auto_Auction.Controls.CreateUserView">
+    
+          <StackPanel>
+              <Grid>
+                  <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="220">
+            
+                      <TextBlock Text="Create user" FontSize="28" FontWeight="Regular" HorizontalAlignment="Center" Margin="0,0,0,30"/>
+            
+                      <TextBox Watermark="Username" Height="40" Margin="0,0,0,12" Padding="10,0"/>
+            
+                      <TextBox Watermark="Password" Height="40" Margin="0,0,0,12" Padding="10,0" PasswordChar="•"/>
+            
+                      <TextBox Watermark="Password again" Height="40" Margin="0,0,0,16" Padding="10,0" PasswordChar="•"/>
+            
+                      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
+                          <RadioButton Content="Corporate" Margin="0,0,20,0"/>
+                          <RadioButton Content="Private" IsChecked="True" />
+                      </StackPanel>
+            
+                      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+                          <Button Content="Cancel" Width="100" Height="40" Background="White" Foreground="Gray" BorderBrush="Gray"/>
+                          <Button Content="Create" Width="100" Height="40" Background="Green" Foreground="White"/>
+                      </StackPanel>
+                  </StackPanel>
+              </Grid>
+          </StackPanel>
+</UserControl>

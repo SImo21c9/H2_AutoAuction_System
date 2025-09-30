@@ -14,4 +14,10 @@ public partial class MainWindow : Window
     {
         MainContent.Content = new DashBoardControle();
     }
+
+    public void NavigateToUser()
+    {
+        MainContent.Content = new CreateUserView();
+    }
+    
 }

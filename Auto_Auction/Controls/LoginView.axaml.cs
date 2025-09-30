@@ -66,5 +66,18 @@ namespace Auto_Auction.Controls
         {
             _mainWindow.NavigateToDashboard();
         }
+        
+        private void OnCreateUser(object? sender, RoutedEventArgs e)
+        {
+            NavigateToUser();
+        }
+        
+        private void NavigateToUser()
+        {
+            _mainWindow.NavigateToUser();
+        }
+
     }
+    
+    
 }
