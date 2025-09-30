@@ -8,7 +8,13 @@
         x:Class="Auto_Auction.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Auto_Auction">
+        Title="Auto_Auction"
+        Width="1000"
+        Height="700"
+        
+        
+        >
+    <ContentControl x:Name="MainContent"/>
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -16,8 +22,6 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid>
-        <local:LoginView HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    </Grid>
+  
 
 </Window>
