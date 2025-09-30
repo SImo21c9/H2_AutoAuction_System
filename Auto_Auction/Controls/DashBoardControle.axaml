@@ -27,12 +27,17 @@
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   GridLinesVisibility="All"
-                  IsReadOnly="True">
+                  IsReadOnly="True"
+                  DoubleTapped="DataGrid_DoubleTappedYourAuctions">
+            
             <DataGrid.Styles>
                 <Style Selector="TextBlock">
                     <Setter Property="TextAlignment" Value="Center"/>
+                    
                 </Style>
+                
             </DataGrid.Styles>
+            
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Vehicle.Name}" Width="*" />
                 <DataGridTextColumn Header="Year" Binding="{Binding Vehicle.Year}" Width="*"/>
@@ -51,7 +56,8 @@
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   GridLinesVisibility="All"
-                  IsReadOnly="True">
+                  IsReadOnly="True"
+                  DoubleTapped="DataGrid_DoubleTappedOtherAuctions">
             <DataGrid.Styles>
                 <Style Selector="TextBlock">
                     <Setter Property="TextAlignment" Value="Center"/>

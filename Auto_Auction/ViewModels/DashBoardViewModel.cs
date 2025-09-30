@@ -14,7 +14,7 @@ public class DashBoardViewModel : ObservableObject
         
         UserAuctions.Add(new Auction(1,
             new PrivateCar(1, "Toyota Camry", 2020, 123, 2020, true, "PersonalCar",  123, 20, FuelTypeEnum.Petrol, EnergyClassEnum.C, 4, new Dimensions(23, 23, 32),0.7, true),
-            new Seller(1, "John Doe", "awdawd", 9200),9000));
+            new Seller(1, "John Doe", "Hestemanden123", 9200),9000));
 
     }
 }
