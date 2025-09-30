@@ -10,4 +10,8 @@ public partial class MainWindow : Window
         InitializeComponent();
         MainContent.Content = new LoginView(this); // Pass reference of MainWindow
     }
+    public void NavigateToDashboard()
+    {
+        MainContent.Content = new DashBoardControle();
+    }
 }
