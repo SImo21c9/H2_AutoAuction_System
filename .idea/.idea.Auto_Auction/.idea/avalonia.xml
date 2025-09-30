@@ -4,7 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Auto_Auction/App.axaml" value="Auto_Auction/Auto_Auction.csproj" />
-        <entry key="Auto_Auction/Controls/CreateUser.axaml" value="Auto_Auction/Auto_Auction.csproj" />
+        <entry key="Auto_Auction/Controls/DashBoardControle.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Controls/LoginView.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Views/LoginView.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Views/LoginWindow.axaml" value="Auto_Auction/Auto_Auction.csproj" />
