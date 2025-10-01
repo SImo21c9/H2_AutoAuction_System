@@ -12,7 +12,7 @@ public partial class MainWindow : Window
     }
     public void NavigateToDashboard()
     {
-        MainContent.Content = new DashBoardControle();
+        MainContent.Content = new DashBoardControle(this);
     }
 
     public void NavigateToUser()
@@ -20,6 +20,16 @@ public partial class MainWindow : Window
         MainContent.Content = new CreateUserView(this);
     }
 
-    
+    public void NavigateToBuyerAuction()
+    {
+        MainContent.Content = new BuyerofAuctionView(this);
+    }
+
+    public void NavigateToModalWindow()
+    {
+        MainContent.Content = new MakeABidView(this);
+    }
+
+
 
 }

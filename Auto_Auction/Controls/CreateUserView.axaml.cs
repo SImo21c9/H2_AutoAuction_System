@@ -37,7 +37,7 @@ public partial class CreateUserView : UserControl
             throw new Exception("Passwords do not match");
         }
 
-        _mainwindow.MainContent.Content = new DashBoardControle();
+        _mainwindow.MainContent.Content = new DashBoardControle(_mainwindow);
     }
     
 

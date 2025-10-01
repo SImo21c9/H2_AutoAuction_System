@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="150"
+        x:Class="Auto_Auction.Controls.MakeABidView"
+        Title="Make a bid"
+        Width="400"
+        Height="150"
+        CanResize="False"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Make a bid" FontSize="16" FontWeight="Bold" Margin="10" Grid.Row="0"/>
+
+        <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
+            <TextBlock Text="Your bid" Width="80" VerticalAlignment="Center"/>
+            <TextBox Name="BidAmountTextBox" Width="180" Watermark="8000" Height="30"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" Grid.Row="2">
+            <Button Content="Cancel" Width="100" Height="30" Margin="0,0,10,0" Click="OnCancelBidClick"/>
+            <Button Content="bid" Width="100" Height="30" Background="LightGreen" Click="OnSubmitBidClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
