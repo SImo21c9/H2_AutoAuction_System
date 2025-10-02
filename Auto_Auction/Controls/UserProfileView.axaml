@@ -63,7 +63,7 @@
 				<TextBlock Text="{Binding StatusMessage}" Foreground="Gray" FontSize="12" Margin="0,8,0,0"/>
 			</StackPanel>
 
-			<!-- Back-knap -->
+			<!-- Back-button -->
 			<Button Content="Back"
                     Width="80"
                     HorizontalAlignment="Left"

@@ -1,0 +1,99 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Auto_Auction.Controls.VehiclePropertyControl"
+             xmlns:vm="using:Auto_Auction.ViewModels"
+             x:DataType="vm:VehiclePropertyControlViewModel">
+  <StackPanel>
+      <WrapPanel>
+          <TextBlock Width="100">Vehicle Type</TextBlock>
+          <ComboBox SelectionChanged="SelectingItemsControl_OnSelectionChanged">
+              <ComboBoxItem >Truck</ComboBoxItem>
+              <ComboBoxItem>PrivateCar</ComboBoxItem>
+              <ComboBoxItem>ProfessionCar</ComboBoxItem>
+              <ComboBoxItem>Bus</ComboBoxItem>
+              
+          </ComboBox>
+      </WrapPanel>
+      <StackPanel IsVisible="{Binding TruckVisible}">
+          <WrapPanel>
+              <TextBlock Width="100">Height</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Length</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Weight</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Engine size</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Tow Bar</TextBlock>
+              <RadioButton GroupName="Towbar">Yes</RadioButton>
+              <RadioButton GroupName="Towbar">No</RadioButton>
+          </WrapPanel>
+      </StackPanel>
+      
+      <StackPanel IsVisible="{Binding PrivCarVisble}">
+          <WrapPanel>
+              <TextBlock Width="100">Height</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Length</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Weight</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Engine size</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+      </StackPanel>
+      <StackPanel IsVisible="{Binding ProCarVisble}">
+          <WrapPanel>
+              <TextBlock Width="100">Height</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Length</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Weight</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Engine size</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+      </StackPanel>
+      <StackPanel IsVisible="{Binding BusVisble}">
+          <WrapPanel>
+              <TextBlock Width="100">Height</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Length</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Weight</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Engine size</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+      </StackPanel>
+  </StackPanel>
+</UserControl>

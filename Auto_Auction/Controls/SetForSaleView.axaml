@@ -1,0 +1,39 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:Auto_Auction.Controls"
+             xmlns:viewmodels="clr-namespace:Auto_Auction.ViewModels"
+             x:Class="Auto_Auction.Controls.SetForSaleView"
+             x:DataType="viewmodels:SetForSaleViewModel">
+    <Grid ColumnDefinitions="2*,2*,3*" RowDefinitions="Auto,Auto,Auto">
+        <StackPanel Grid.Column="0" Grid.Row="0" Margin="10">
+            <TextBlock Text="General Information" FontWeight="Bold"/>
+            <TextBlock Text="Name"/>
+            <TextBox Text="{}" />
+            <TextBlock Text="Mileage"/>
+            <TextBox Text="{}" /> 
+            <TextBlock Text="Registration Number"/>
+            <TextBox/>
+            <TextBlock Text="Year"/>
+            <TextBox/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="10">
+            <TextBlock Text="Auction Information" FontWeight="Bold"/>
+            <TextBlock Text="Starting Bid"/>
+            <TextBox/>
+            <TextBlock Text="End Date"/>
+            <DatePicker/>
+        </StackPanel>
+
+        
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" Margin="10" Spacing="8">
+            <Button Content="Create" />
+            <Button Content="Cancel" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <controls:VehiclePropertyControl DataContext="{Binding VehiclePropertyControlViewModel}"/>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

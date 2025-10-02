@@ -1,4 +1,5 @@
 using Auto_Auction.Controls;
+using Auto_Auction.ViewModels;
 using Avalonia.Controls;
 
 namespace Auto_Auction.Views;
@@ -18,6 +19,10 @@ public partial class MainWindow : Window
     public void NavigateToUser()
     {
         MainContent.Content = new CreateUserView(this);
+    }
+    public void NavigateToSetForSale()
+    {
+        MainContent.Content = new SetForSaleView();
     }
 
     public void NavigateToBuyerAuction()
