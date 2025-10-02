@@ -25,6 +25,16 @@ public partial class MainWindow : Window
         MainContent.Content = new SetForSaleView();
     }
 
-    
+    public void NavigateToBuyerAuction()
+    {
+        MainContent.Content = new BuyerofAuctionView(this);
+    }
+
+    public void NavigateToModalWindow()
+    {
+        MainContent.Content = new MakeABidView(this);
+    }
+
+
 
 }
