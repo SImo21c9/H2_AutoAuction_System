@@ -42,10 +42,9 @@
                 <DataGridTextColumn Header="Name" Binding="{Binding Vehicle.Name}" Width="*" />
                 <DataGridTextColumn Header="Year" Binding="{Binding Vehicle.Year}" Width="*"/>
                 <DataGridTextColumn Header="Bid" Binding="{Binding HighestBid.Amount, FallbackValue=No bids}" Width="*" />
+                <DataGridTextColumn Header="Closing" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-
-
 
         
         <TextBlock Grid.Column="0" Grid.Row="2" Text="Current auctions" Margin="10,10,10,0" FontWeight="Bold"/>
@@ -67,9 +66,9 @@
                 <DataGridTextColumn Header="Name" Binding="{Binding Vehicle.Name}" Width="*" />
                 <DataGridTextColumn Header="Year" Binding="{Binding Vehicle.Year}" Width="*"/>
                 <DataGridTextColumn Header="Bid" Binding="{Binding HighestBid.Amount, FallbackValue=No bids}" Width="*" />
+                <DataGridTextColumn Header="Closing" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-
       
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4"
                     VerticalAlignment="Top"

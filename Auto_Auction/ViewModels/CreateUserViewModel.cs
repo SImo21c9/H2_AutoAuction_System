@@ -1,8 +1,29 @@
+using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace Auto_Auction.ViewModels;
 using System.Text.RegularExpressions;
 
-public class CreateUserViewModel
+public partial class CreateUserViewModel : ViewModelBase
 {
+    [ObservableProperty]
+    private string name;
+
+    [ObservableProperty]
+    private string email;
+
+    [ObservableProperty]
+    private string password;
+
+    [ObservableProperty]
+    private string cprNumber;
+
+    [ObservableProperty]
+    private string cvrNumber;
+
+    [ObservableProperty]
+    private decimal credit;
+
+    [ObservableProperty] private bool isCorp;
     public static bool IsValidUsername(string username, out string error)
     {
         error = string.Empty;

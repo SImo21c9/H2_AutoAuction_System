@@ -28,7 +28,7 @@
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
                 <Label FontSize="16" Content="Current bid: DKK  "/>
-                <TextBox FontSize="16" Text="{Binding CurrentBid}"  FontWeight="Bold"/>
+                <TextBox FontSize="16"  FontWeight="Bold"/> <!--I need to make a databinding to amount-->
             </StackPanel>
             
             <Button Content="Make a bid" Background="LightGreen" Height="40" Width="120" Margin="0,0,0,10" Click="OnMakeBidClick"/>
