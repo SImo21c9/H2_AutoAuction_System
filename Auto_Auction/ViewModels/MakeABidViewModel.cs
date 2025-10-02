@@ -37,6 +37,13 @@ public class MakeABidViewModel : ViewModelBase, IReactiveObject
         set => this.RaiseAndSetIfChanged(ref _errorMessage, value);
     }
 
+    public void SetAuctionAndBuyer(Auction auction, Buyer buyer)
+    {
+        CurrentAuction = auction;
+        CurrentBuyer = buyer;
+        BidAmount = (auction.HighestBid?.Amount ?? auction.MinimumPrice) + 1;
+    }
+    
     private bool ValidateBid()
     {
         if (CurrentAuction == null)
@@ -50,8 +57,8 @@ public class MakeABidViewModel : ViewModelBase, IReactiveObject
             ErrorMessage = "Bid must be greater than zero";
             return false;
         }
-        
 
+        
         return true;
     }
 
