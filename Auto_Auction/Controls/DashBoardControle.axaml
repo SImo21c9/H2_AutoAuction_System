@@ -76,7 +76,7 @@
                     HorizontalAlignment="Right"
                     Margin="10"
                     Spacing="10">
-            <Button Content="+ Set for sale" Width="120" Background="Green"/>
+            <Button Content="+ Set for sale" Width="120" Background="Green" Click="SetForSale" />
             <Button Content="User profile" Width="120"/>
             <Button Content="Bid History" Width="120"/>
             <Button Content="All Auctions" Width="120"/>

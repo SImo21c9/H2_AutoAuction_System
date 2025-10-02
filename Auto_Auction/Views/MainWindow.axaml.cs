@@ -1,4 +1,5 @@
 using Auto_Auction.Controls;
+using Auto_Auction.ViewModels;
 using Avalonia.Controls;
 
 namespace Auto_Auction.Views;
@@ -12,12 +13,16 @@ public partial class MainWindow : Window
     }
     public void NavigateToDashboard()
     {
-        MainContent.Content = new DashBoardControle();
+        MainContent.Content = new DashBoardControle(this);
     }
 
     public void NavigateToUser()
     {
         MainContent.Content = new CreateUserView(this);
+    }
+    public void NavigateToSetForSale()
+    {
+        MainContent.Content = new SetForSaleView();
     }
 
     
