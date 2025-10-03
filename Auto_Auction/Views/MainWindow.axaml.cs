@@ -35,6 +35,15 @@ public partial class MainWindow : Window
         MainContent.Content = new MakeABidView(this);
     }
 
+    public void NavigateToBidHistory()
+    {
+        MainContent.Content = new BidHistoryView();
+    }
+
+    public void NavigateToUserProfile()
+    {
+        MainContent.Content = new UserProfileView();
+    }
 
 
 }
