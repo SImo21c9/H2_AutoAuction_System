@@ -1,16 +1,20 @@
 using System;
- using Avalonia;
+using Auto_Auction.Views;
+using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
 namespace Auto_Auction.Controls;
 
 public partial class DashBoardControle : UserControl
 {
-    public DashBoardControle()
+    private MainWindow _mainWindow;
+    public DashBoardControle(MainWindow mainWindow)
     {
         InitializeComponent();
         DataContext = new Auto_Auction.ViewModels.DashBoardViewModel();
+        _mainWindow = mainWindow;
     }
     private void DataGrid_DoubleTappedYourAuctions(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
@@ -28,5 +32,23 @@ public partial class DashBoardControle : UserControl
             Console.WriteLine("OtherAuctions ");
             dataGrid.SelectedItem = null;
         }
+
+        NavigateToBuyerAuction();
+
+    }
+
+    private void NavigateToBuyerAuction()
+    {
+        _mainWindow.NavigateToBuyerAuction();
+    }
+    
+    private void SetForSale(Object sender, RoutedEventArgs e)
+    {
+        NavigateToSetForSale();
+    }
+
+    private void NavigateToSetForSale()
+    {
+        _mainWindow.NavigateToSetForSale();
     }
 }

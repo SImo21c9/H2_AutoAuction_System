@@ -13,10 +13,10 @@ public partial class CreateUserViewModel : ViewModelBase
 
     [ObservableProperty]
     private string password;
-
+    
     [ObservableProperty]
-    private string cprNumber;
-
+    private string passwordagain;
+    
     [ObservableProperty]
     private string cvrNumber;
 

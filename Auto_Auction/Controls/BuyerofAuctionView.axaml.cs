@@ -32,4 +32,5 @@ public partial class BuyerofAuctionView : UserControl
     }
 
     
+    
 }
