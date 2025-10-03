@@ -1,10 +1,7 @@
 using System;
 using Auto_Auction.Views;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using MsBox.Avalonia;
 
 namespace Auto_Auction.Controls;
 
@@ -32,14 +29,46 @@ public partial class DashBoardControle : UserControl
             //dataGrid.SelectedItem
             Console.WriteLine("OtherAuctions ");
             dataGrid.SelectedItem = null;
-        }
+        } 
+    
+        NavigateToBuyerAuction();
     }
+
+    private void NavigateToBuyerAuction()
+    {
+        _mainWindow.NavigateToBuyerAuction();
+    }
+
+    
+    
     private void SetForSale(object? sender, RoutedEventArgs e)
     {
         NavigateToSetForSale();
     }
+
     private void NavigateToSetForSale()
     {
         _mainWindow.NavigateToSetForSale();
     }
+
+    private void UserProfile(object? sender, RoutedEventArgs e)
+    {
+        // NavigateUserProfile();
+    }
+
+    // private void NavigateUserProfile()
+    // {
+    //     _mainWindow.NavigateToUserProfile();
+    // }
+
+    private void BidHistory(object? sender, RoutedEventArgs e)
+    {
+        NavigateToBidHistory();
+    }
+
+    private void NavigateToBidHistory()
+    {
+        _mainWindow.NavigateToBidHistory();
+    }
+    
 }

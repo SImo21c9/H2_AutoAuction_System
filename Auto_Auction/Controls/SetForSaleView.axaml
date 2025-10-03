@@ -28,7 +28,7 @@
         
         <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" Margin="10" Spacing="8">
             <Button Content="Create" />
-            <Button Content="Cancel" />
+            <Button Content="Cancel" Click="CancelSale"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="0">

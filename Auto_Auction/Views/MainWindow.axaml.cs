@@ -1,3 +1,4 @@
+using System;
 using Auto_Auction.Controls;
 using Auto_Auction.ViewModels;
 using Avalonia.Controls;
@@ -22,7 +23,7 @@ public partial class MainWindow : Window
     }
     public void NavigateToSetForSale()
     {
-        MainContent.Content = new SetForSaleView();
+        MainContent.Content = new SetForSaleView(this);
     }
 
     public void NavigateToBuyerAuction()
@@ -33,6 +34,24 @@ public partial class MainWindow : Window
     public void NavigateToModalWindow()
     {
         MainContent.Content = new MakeABidView(this);
+    }
+
+    // public void NavigateToUserProfile()
+    // {
+    //     MainContent.Content = new UserProfileView(this);
+    // }
+
+    public void NavigateToBidHistory()
+    {
+        try
+        {
+            MainContent.Content = new BidHistoryView(this);
+        }
+        catch (System.InvalidCastException e)
+        {
+            Console.WriteLine(e);
+        }
+     
     }
 
 
