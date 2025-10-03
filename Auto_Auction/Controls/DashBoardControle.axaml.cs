@@ -72,12 +72,4 @@ public partial class DashBoardControle : UserControl
     {
         _mainWindow.NavigateToBidHistory();
     }
-    private void SetForSale(object? sender, RoutedEventArgs e)
-    {
-        NavigateToSetForSale();
-    }
-    private void NavigateToSetForSale()
-    {
-        _mainWindow.NavigateToSetForSale();
-    }
 }
