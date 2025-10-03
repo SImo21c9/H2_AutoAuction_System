@@ -4,6 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using MsBox.Avalonia;
 
 namespace Auto_Auction.Controls;
 
@@ -70,5 +71,13 @@ public partial class DashBoardControle : UserControl
     private void NavigateToBidHistory()
     {
         _mainWindow.NavigateToBidHistory();
+    }
+    private void SetForSale(object? sender, RoutedEventArgs e)
+    {
+        NavigateToSetForSale();
+    }
+    private void NavigateToSetForSale()
+    {
+        _mainWindow.NavigateToSetForSale();
     }
 }
