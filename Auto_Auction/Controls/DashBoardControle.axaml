@@ -2,6 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+             xmlns:ia="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Auto_Auction.Controls.DashBoardControle"
              xmlns:vm="clr-namespace:Auto_Auction.ViewModels"
@@ -27,6 +29,13 @@
                   GridLinesVisibility="All"
                   IsReadOnly="True">
             
+            <i:Interaction.Behaviors>
+                <ia:EventTriggerBehavior EventName="DoubleTapped">
+                    <ia:InvokeCommandAction Command="{Binding YourAuctionsDoubleTappedCommand}" 
+                                          CommandParameter="{Binding $parent[DataGrid].SelectedItem}"/>
+                </ia:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+            
             <DataGrid.Styles>
                 <Style Selector="TextBlock">
                     <Setter Property="TextAlignment" Value="Center"/>
@@ -48,6 +57,14 @@
                   HeadersVisibility="Column"
                   GridLinesVisibility="All"
                   IsReadOnly="True">
+            
+            <i:Interaction.Behaviors>
+                <ia:EventTriggerBehavior EventName="DoubleTapped">
+                    <ia:InvokeCommandAction Command="{Binding OtherAuctionsDoubleTappedCommand}" 
+                                          CommandParameter="{Binding $parent[DataGrid].SelectedItem}"/>
+                </ia:EventTriggerBehavior>
+            </i:Interaction.Behaviors>
+            
             <DataGrid.Styles>
                 <Style Selector="TextBlock">
                     <Setter Property="TextAlignment" Value="Center"/>

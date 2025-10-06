@@ -31,8 +31,6 @@ public partial class DashBoardViewModel : ViewModelBase
     [RelayCommand]
     private void UserProfile()
     {
-        // When you implement user profile navigation
-        // _mainViewModel.NavigateToUserProfile();
         Console.WriteLine("User Profile clicked");
     }
 
@@ -48,8 +46,6 @@ public partial class DashBoardViewModel : ViewModelBase
         if (auction != null)
         {
             Console.WriteLine($"YourAuctions - Double tapped on: {auction.Vehicle.Name}");
-            // Add your logic here for when user double-taps on their own auction
-            // For example: Navigate to auction details or edit auction
         }
     }
 
@@ -59,11 +55,10 @@ public partial class DashBoardViewModel : ViewModelBase
         if (auction != null)
         {
             Console.WriteLine($"OtherAuctions - Double tapped on: {auction.Vehicle.Name}");
-            // Add your logic here for when user double-taps on other auctions
-            // For example: Navigate to bid on auction
             _mainViewModel.NavigateToBuyerAuction();
         }
     }
+    
 
     
     
