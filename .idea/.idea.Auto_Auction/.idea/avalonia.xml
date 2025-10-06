@@ -8,6 +8,8 @@
         <entry key="Auto_Auction/Controls/CreateUserView.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Controls/DashBoardControle.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Controls/LoginView.axaml" value="Auto_Auction/Auto_Auction.csproj" />
+        <entry key="Auto_Auction/Controls/SetForSaleView.axaml" value="Auto_Auction/Auto_Auction.csproj" />
+        <entry key="Auto_Auction/Controls/VehiclePropertyControl.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Views/LoginView.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Views/LoginWindow.axaml" value="Auto_Auction/Auto_Auction.csproj" />
         <entry key="Auto_Auction/Views/MainWindow.axaml" value="Auto_Auction/Auto_Auction.csproj" />
