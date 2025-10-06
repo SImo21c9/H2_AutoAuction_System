@@ -67,7 +67,8 @@
 			<Button Content="Back"
                     Width="80"
                     HorizontalAlignment="Left"
-                    Margin="0,16,0,0"/>
+                    Margin="0,16,0,0"
+                    Command="{Binding Back}"/>
 		</StackPanel>
 	</Border>
 </UserControl>

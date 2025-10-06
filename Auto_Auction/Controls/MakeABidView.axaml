@@ -2,13 +2,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:Auto_Auction.ViewModels"
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="150"
         x:Class="Auto_Auction.Controls.MakeABidView"
         Title="Make a bid"
         Width="400"
         Height="150"
         CanResize="False"
-        WindowStartupLocation="CenterOwner">
+        WindowStartupLocation="CenterOwner"
+        x:DataType="viewModels:MakeABidViewModel">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -24,8 +26,8 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" Grid.Row="2">
-            <Button Content="Cancel" Width="100" Height="30" Margin="0,0,10,0" Click="OnCancelBidClick"/>
-            <Button Content="bid" Width="100" Height="30" Background="LightGreen" Click="OnSubmitBidClick"/>
+            <Button Content="Cancel" Width="100" Height="30" Margin="0,0,10,0" Command="{Binding OnCancelBidClick}"/>
+            <Button Content="bid" Width="100" Height="30" Background="LightGreen" Command="{Binding Bid}"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -73,4 +73,10 @@ public partial class UserProfileViewModel : ObservableObject
             StatusMessage = "Only corporate users can deposit!";
         }
     }
+
+    [RelayCommand]
+    private void Back()
+    {
+        //Logic to navigate back to Dashboard
+    }
 }

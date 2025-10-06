@@ -5,7 +5,7 @@ namespace Auto_Auction.DB
 {
     public partial class Database
     {
-        private static SqlConnection GetConnection()
+        public static SqlConnection GetConnection()
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder
             {

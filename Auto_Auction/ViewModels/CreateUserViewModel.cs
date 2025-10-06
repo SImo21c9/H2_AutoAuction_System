@@ -1,44 +1,19 @@
+using CommunityToolkit.Mvvm.Input;
+
 namespace Auto_Auction.ViewModels;
 using System.Text.RegularExpressions;
 
-public class CreateUserViewModel
+public partial class CreateUserViewModel
 {
-    public static bool IsValidUsername(string username, out string error)
+    [RelayCommand]
+    public void RegisterUser()
     {
-        error = string.Empty;
-        if (string.IsNullOrWhiteSpace(username))
-        {
-            error = "Username is required.";
-            return false;
-        }
-        
-        
-        if (!Regex.IsMatch(username!, @"^[A-Za-z0-9,-]{3,32}$"))
-        {
-            error = "Invalid UserName. Must be 3–32 characters and may contain letters, numbers, comma or dash.";
-            return false;
-        }
-
-        return true;
+        //Logic for Registering a new user goes here
     }
 
-    public static bool IsValidPassword(string password, out string error)
+    [RelayCommand]
+    public void Cancel()
     {
-        error = string.Empty;
-        if (string.IsNullOrWhiteSpace(password))
-        {
-            error = "Password is required.";
-            return false;
-        }
-
-
-        if (!Regex.IsMatch(password!, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,32}$"))
-        {
-            error =
-                "Invalid Password. Must be 8–32 chars and include at least one uppercase, one lowercase and one digit.";
-            return false;
-        }
-
-        return true;
+        //Logic for Cancelling user registration goes here
     }
 }

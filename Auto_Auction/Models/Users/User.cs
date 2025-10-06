@@ -4,24 +4,25 @@ using Auto_Auction.Security;
 
 namespace Auto_Auction.Models.Users
 {
-    public abstract class User : IValidate
+    public class User : IValidate
     {
         public int Id { get; set; }
         public string UserName { get; set; }
 
         // Store hashed password, not plain text
         public string PasswordHash { get; private set; }
-
-        public bool IsCorp => this is CorporateUser;
+        
+        
         public bool CanSell => this is Seller;
-        public int PostalCode { get; set; }
+        public int ZipCode { get; set; }
+        public decimal Balance { get; set; }
 
-        protected User(int id, string userName, string password, int postalCode)
+        public User(int id, string userName, string password, int zipCode)
         {
             Id = id;
             UserName = userName;
             SetPassword(password); // Hash happens here
-            PostalCode = postalCode;
+            ZipCode = zipCode;
         }
 
         public void SetPassword(string password)
@@ -46,7 +47,7 @@ namespace Auto_Auction.Models.Users
 
         public override string ToString()
         {
-            return $"Id: {Id}, UserName: {UserName}, PostalCode: {PostalCode}";
+            return $"Id: {Id}, UserName: {UserName}, PostalCode: {ZipCode}";
         }
     }
 }

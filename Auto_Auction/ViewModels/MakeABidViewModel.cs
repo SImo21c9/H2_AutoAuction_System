@@ -1,11 +1,27 @@
+using CommunityToolkit.Mvvm.Input;
+
 namespace Auto_Auction.ViewModels;
 
-public class MakeABidViewModel
+public partial class MakeABidViewModel
 {
+    
     public MakeABidViewModel()
     {
-        // constructor code if needed
+        
     }
+
+    [RelayCommand]
+    public void Bid()
+    {
+        //Logic goes here to place a bid
+    }
+
+    [RelayCommand]
+    private void OnCancelBidClick()
+    {
+        //logic to cancel the bid goes here
+    }
+    
 
     public static bool IsValidateAmount(decimal amount, out string error)
     {
@@ -19,4 +35,6 @@ public class MakeABidViewModel
         error = string.Empty;
         return true;
     }
+    
+    
 }

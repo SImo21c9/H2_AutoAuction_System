@@ -30,6 +30,6 @@
 		
 
 		<!-- Back button -->
-		<Button Content="Back" HorizontalAlignment="Left" Width="100" Click="GoBacktoDashboard"/>
+		<Button Content="Back" HorizontalAlignment="Left" Width="100" Command="{Binding OnBackClick}"/>
 	</StackPanel>
 </UserControl>

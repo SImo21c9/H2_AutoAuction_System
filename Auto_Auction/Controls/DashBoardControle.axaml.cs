@@ -11,7 +11,6 @@ public partial class DashBoardControle : UserControl
     public DashBoardControle(MainWindow mainWindow)
     {
         InitializeComponent();
-        DataContext = new Auto_Auction.ViewModels.DashBoardViewModel();
         _mainWindow = mainWindow;
     }
     private void DataGrid_DoubleTappedYourAuctions(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
