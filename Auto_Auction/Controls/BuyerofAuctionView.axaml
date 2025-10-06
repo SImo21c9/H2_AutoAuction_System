@@ -33,7 +33,7 @@
             
             <Button Content="Make a bid" Background="LightGreen" Height="40" Width="120" Margin="0,0,0,10" Command="{Binding OnMakeBidClick}"/>
             
-            <Button Content="Back" Height="40" Width="60" Command="{Binding BackToHomeScreen}"/>
+            <Button Content="Back" Height="40" Width="60" Command="{Binding BackToHomeScreenCommand}"/>
             
         </StackPanel>
         

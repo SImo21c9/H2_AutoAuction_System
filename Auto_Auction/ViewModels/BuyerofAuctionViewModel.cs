@@ -20,9 +20,10 @@ public partial class BuyerofAuctionViewModel : ViewModelBase
         _mainViewModel.NavigateToDashboard();
     }
 
+    //here is a to do this button should navigate to a window to allow user to make a bid but it doesn't work right now for some reason 
     [RelayCommand]
     public void OnMakeBidClick()
     {
-        //Navigate to 
+        _mainViewModel.NavigateToMakeBid();
     }
 }

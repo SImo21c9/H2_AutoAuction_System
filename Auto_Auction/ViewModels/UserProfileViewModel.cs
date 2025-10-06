@@ -5,8 +5,9 @@ using System;
 
 namespace Auto_Auction.ViewModels;
 
-public partial class UserProfileViewModel : ObservableObject
+public partial class UserProfileViewModel : ViewModelBase
 {
+    private readonly MainWindowViewModel _mainViewModel;
     [ObservableProperty]
     private User currentUser;
 
@@ -29,10 +30,16 @@ public partial class UserProfileViewModel : ObservableObject
     {
         CurrentUser = user;
         StatusMessage = "Ready";
+        
 
         // Eksempel på statistik
         AuctionsCreated = 3;
         AuctionsWon = 1;
+    }
+
+    public UserProfileViewModel(MainWindowViewModel mainViewModel)
+    {
+        _mainViewModel = mainViewModel;
     }
 
     // Properties for XAML bindings
@@ -77,6 +84,6 @@ public partial class UserProfileViewModel : ObservableObject
     [RelayCommand]
     private void Back()
     {
-        //Logic to navigate back to Dashboard
+        _mainViewModel.NavigateToDashboard();
     }
 }

@@ -26,6 +26,8 @@ public class ViewLocator : IDataTemplate
             SetForSaleViewModel => new SetForSaleView(),
             BuyerofAuctionViewModel => new BuyerofAuctionView(),
             BidHistoryViewModel => new BidHistoryView(),
+            MakeABidViewModel => new MakeABidView(),
+            UserProfileViewModel => new UserProfileView(),
             _ => new TextBlock { Text = "Not Found: " + name }
         };
     }

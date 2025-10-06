@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Auto_Auction.Controls;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace Auto_Auction.ViewModels;
 
@@ -20,4 +21,6 @@ public partial class MainWindowViewModel : ViewModelBase
     public void NavigateToSetForSale() => CurrentView = new SetForSaleViewModel(this);
     public void NavigateToBuyerAuction() => CurrentView = new BuyerofAuctionViewModel(this);
     public void NavigateToBidHistory() => CurrentView = new BidHistoryViewModel(this);
+    public void NavigateToMakeBid() => CurrentView = new MakeABidViewModel(this);
+    public void NavigateToProfile() => CurrentView = new UserProfileViewModel(this);
 }

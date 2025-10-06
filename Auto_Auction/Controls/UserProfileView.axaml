@@ -68,7 +68,7 @@
                     Width="80"
                     HorizontalAlignment="Left"
                     Margin="0,16,0,0"
-                    Command="{Binding Back}"/>
+                    Command="{Binding BackCommand}"/>
 		</StackPanel>
 	</Border>
 </UserControl>

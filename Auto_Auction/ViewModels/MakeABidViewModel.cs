@@ -1,18 +1,20 @@
 using System;
+using System.Xml;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Auto_Auction.ViewModels;
 
-public partial class MakeABidViewModel
+public partial class MakeABidViewModel : ViewModelBase
 {
-    private readonly MainWindowViewModel _MainViewModel;
+    private readonly MainWindowViewModel _mainViewModel;
     // [ObservableProperty]
     // private decimal bidAmount;
     
     public MakeABidViewModel(MainWindowViewModel mainViewModel )
     {
-        _MainViewModel = mainViewModel;
+        _mainViewModel = mainViewModel;
     }
 
     [RelayCommand]
@@ -31,9 +33,12 @@ public partial class MakeABidViewModel
     }
 
     [RelayCommand]
-    private void OnCancelBidClick()
+    private void OnCancelBidClick(object parameter)
     {
-        //logic to cancel the bid goes here
+        if (parameter is Window window)
+        {
+            window.Close();
+        }
     }
     
 

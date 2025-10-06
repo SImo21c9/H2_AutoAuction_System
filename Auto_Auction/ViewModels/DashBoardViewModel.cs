@@ -31,7 +31,8 @@ public partial class DashBoardViewModel : ViewModelBase
     [RelayCommand]
     private void UserProfile()
     {
-        Console.WriteLine("User Profile clicked");
+        _mainViewModel.NavigateToProfile();
+
     }
 
     [RelayCommand]
@@ -39,6 +40,7 @@ public partial class DashBoardViewModel : ViewModelBase
     {
         _mainViewModel.NavigateToSetForSale();
     }
+
 
     [RelayCommand]
     private void YourAuctionsDoubleTapped(Auction auction)
