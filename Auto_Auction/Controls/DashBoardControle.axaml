@@ -18,24 +18,19 @@
             <RowDefinition Height="2*"/>    
         </Grid.RowDefinitions>
 
-       
         <TextBlock Grid.Column="0" Grid.Row="0" Text="Your auctions" Margin="10,10,10,0" FontWeight="Bold"/>
 
-       
         <DataGrid Grid.Column="0" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" Margin="10,0,10,10"
                   ItemsSource="{Binding UserAuctions}" 
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   GridLinesVisibility="All"
-                  IsReadOnly="True"
-                  DoubleTapped="DataGrid_DoubleTappedYourAuctions">
+                  IsReadOnly="True">
             
             <DataGrid.Styles>
                 <Style Selector="TextBlock">
                     <Setter Property="TextAlignment" Value="Center"/>
-                    
                 </Style>
-                
             </DataGrid.Styles>
             
             <DataGrid.Columns>
@@ -45,19 +40,14 @@
             </DataGrid.Columns>
         </DataGrid>
 
-
-
-        
         <TextBlock Grid.Column="0" Grid.Row="2" Text="Current auctions" Margin="10,10,10,0" FontWeight="Bold"/>
 
-        
         <DataGrid Grid.Column="0" Grid.Row="3" BorderBrush="DarkGray" BorderThickness="1" Margin="10,0,10,10"
                   ItemsSource="{Binding UserAuctions}" 
                   AutoGenerateColumns="False"
                   HeadersVisibility="Column"
                   GridLinesVisibility="All"
-                  IsReadOnly="True"
-                  DoubleTapped="DataGrid_DoubleTappedOtherAuctions">
+                  IsReadOnly="True">
             <DataGrid.Styles>
                 <Style Selector="TextBlock">
                     <Setter Property="TextAlignment" Value="Center"/>
@@ -70,15 +60,14 @@
             </DataGrid.Columns>
         </DataGrid>
 
-      
         <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="4"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Right"
                     Margin="10"
                     Spacing="10">
-            <Button Content="+ Set for sale" Width="120" Background="Green" Command="{Binding SetForSale}" />
-            <Button Content="User profile" Width="120" Command="{Binding UserProfile}"/>
-            <Button Content="Bid History" Width="120" Command="{Binding BidHistory}"/>
+            <Button Content="+ Set for sale" Width="120" Background="Green" Command="{Binding SetForSaleCommand}" />
+            <Button Content="User profile" Width="120" Command="{Binding UserProfileCommand}"/>
+            <Button Content="Bid History" Width="120" Command="{Binding BidHistoryCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>

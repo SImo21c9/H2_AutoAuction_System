@@ -1,19 +1,33 @@
+using System;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Auto_Auction.ViewModels;
 
 public partial class MakeABidViewModel
 {
+    private readonly MainWindowViewModel _MainViewModel;
+    // [ObservableProperty]
+    // private decimal bidAmount;
     
-    public MakeABidViewModel()
+    public MakeABidViewModel(MainWindowViewModel mainViewModel )
     {
-        
+        _MainViewModel = mainViewModel;
     }
 
     [RelayCommand]
     public void Bid()
     {
-        //Logic goes here to place a bid
+        
+        // if (IsValidateAmount(BidAmount, out string error))
+        // {
+        //     // Add logic to submit bid
+        //     Console.WriteLine($"Bid submitted: {BidAmount}");
+        // }
+        // else
+        // {
+        //     Console.WriteLine($"Invalid bid: {error}");
+        // }
     }
 
     [RelayCommand]

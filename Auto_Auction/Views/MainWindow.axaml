@@ -14,7 +14,7 @@
         
         
         >
-    <ContentControl x:Name="MainContent"/>
+    <ContentControl x:Name="MainContent" Content="{Binding CurrentView}"/>
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,

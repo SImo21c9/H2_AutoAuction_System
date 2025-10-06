@@ -8,20 +8,13 @@ namespace Auto_Auction.Controls;
 
 public partial class BidHistoryView : UserControl
 {
-    private MainWindow _mainWindow;
-    public BidHistoryView(MainWindow mainWindow)
+    public BidHistoryView()
     {
         InitializeComponent();
-        _mainWindow = mainWindow;
     }
-
-    private void GoBacktoDashboard(object? sender, RoutedEventArgs e)
+    
+    private void InitializeComponent()
     {
-        NavigateToDashboard();
-    }
-
-    private void NavigateToDashboard()
-    {
-        _mainWindow.NavigateToDashboard();
+        AvaloniaXamlLoader.Load(this);
     }
 }

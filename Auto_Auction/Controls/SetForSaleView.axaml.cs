@@ -9,21 +9,13 @@ namespace Auto_Auction.Controls;
 
 public partial class SetForSaleView : UserControl
 {
-    private MainWindow _mainWindow;
-    public SetForSaleView(MainWindow mainWindow)
+    public SetForSaleView()
     {
         InitializeComponent();
-        DataContext = new SetForSaleViewModel();
-        _mainWindow = mainWindow;
     }
-
-    private void CancelSale(object? sender, RoutedEventArgs e)
+    
+    private void InitializeComponent()
     {
-        NavigateToDashboard();
-    }
-
-    private void NavigateToDashboard()
-    {
-        _mainWindow.NavigateToDashboard();
+        AvaloniaXamlLoader.Load(this);
     }
 }

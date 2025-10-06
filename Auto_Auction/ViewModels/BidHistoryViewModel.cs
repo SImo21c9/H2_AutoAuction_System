@@ -5,13 +5,13 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace Auto_Auction.ViewModels;
 
-public partial class BidHistoryViewModel : ObservableObject
+public partial class BidHistoryViewModel : ViewModelBase
 {
     [ObservableProperty]
     private ObservableCollection<BidHistoryItem> bidHistory;
 
-    private MainWindowViewModel _mainWindowViewModel;
-    public BidHistoryViewModel(MainWindowViewModel mainWindowViewModel)
+    private MainWindowViewModel _mainViewModel;
+    public BidHistoryViewModel(MainWindowViewModel mainViewModel)
     {
         // Testdata (kan senere hentes fra DB)
         BidHistory = new ObservableCollection<BidHistoryItem>
@@ -21,13 +21,14 @@ public partial class BidHistoryViewModel : ObservableObject
             new BidHistoryItem("BMW 320i", 2020, 25000, 25000, true),
         };
 
-        _mainWindowViewModel = mainWindowViewModel;
+        _mainViewModel = mainViewModel;
     }
 
     [RelayCommand]
-    private void OnBackClick()
+    public void OnBackClick()
     {
-        //logic to navigate back to dashboard
+        _mainViewModel.NavigateToDashboard();
+
     }
 }
 

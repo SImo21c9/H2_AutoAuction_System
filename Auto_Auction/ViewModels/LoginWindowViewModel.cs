@@ -1,3 +1,4 @@
+using Auto_Auction.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -5,20 +6,21 @@ namespace Auto_Auction.ViewModels;
 
 public partial class LoginWindowViewModel : ViewModelBase
 {
-    public LoginWindowViewModel()
+    private readonly MainWindowViewModel _mainWindowViewModel;
+    public LoginWindowViewModel( MainWindowViewModel mainWindowViewModel)
     {
-        
+        _mainWindowViewModel = mainWindowViewModel;
     }
 
     [RelayCommand]
-    private void OnLoginClick()
+    public async void OnLoginClick()
     {
-        //Logic for login goes here
+        _mainWindowViewModel.NavigateToDashboard();
     }
 
     [RelayCommand]
-    private void OnCreateUser()
+    public void OnCreateUser()
     {
-        //Logic for creating a new user goes here 
+        _mainWindowViewModel.NavigateToCreateUser();       
     }
 }

@@ -9,20 +9,14 @@ namespace Auto_Auction.Controls;
 
 public partial class MakeABidView : Window
 {
-    private MainWindow _mainWindow;
-    public MakeABidView(MainWindow mainWindow)
+    public MakeABidView()
     {
         InitializeComponent();
-        _mainWindow = mainWindow;
     }
     
-    private void OnSubmitBidClick(object? sender, RoutedEventArgs e)
+    private void InitializeComponent()
     {
-        //at the end thy should close the modal window
+        AvaloniaXamlLoader.Load(this);
     }
-
-    private void OnCancelBidClick(object? sender, RoutedEventArgs e)
-    {
-        this.Close();
-    }
+    
 }
