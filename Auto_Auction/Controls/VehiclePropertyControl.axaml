@@ -31,6 +31,14 @@
               <TextBox></TextBox>
           </WrapPanel>
           <WrapPanel>
+              <TextBlock Width="100">Capacity</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">LicensType</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
               <TextBlock Width="100">Engine size</TextBlock>
               <TextBox></TextBox>
           </WrapPanel>
@@ -43,15 +51,15 @@
       
       <StackPanel IsVisible="{Binding PrivCarVisble}">
           <WrapPanel>
-              <TextBlock Width="100">Height</TextBlock>
+              <TextBlock Width="100">Seats</TextBlock>
               <TextBox></TextBox>
           </WrapPanel>
           <WrapPanel>
-              <TextBlock Width="100">Length</TextBlock>
+              <TextBlock Width="100">Luggage compartment dimensions</TextBlock>
               <TextBox></TextBox>
           </WrapPanel>
           <WrapPanel>
-              <TextBlock Width="100">Weight</TextBlock>
+              <TextBlock Width="100">LicensType</TextBlock>
               <TextBox></TextBox>
           </WrapPanel>
           <WrapPanel>
@@ -69,11 +77,12 @@
               <TextBox></TextBox>
           </WrapPanel>
           <WrapPanel>
-              <TextBlock Width="100">Weight</TextBlock>
-              <TextBox></TextBox>
+              <TextBlock Width="100">Safety bar</TextBlock>
+              <RadioButton GroupName="Safetybar">Yes</RadioButton>
+              <RadioButton GroupName="Safetybar">No</RadioButton>
           </WrapPanel>
           <WrapPanel>
-              <TextBlock Width="100">Engine size</TextBlock>
+              <TextBlock Width="100">Capacity</TextBlock>
               <TextBox></TextBox>
           </WrapPanel>
       </StackPanel>
@@ -88,6 +97,23 @@
           </WrapPanel>
           <WrapPanel>
               <TextBlock Width="100">Weight</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Seats</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">SleepingSeats</TextBlock>
+              <TextBox></TextBox>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">Toilet</TextBlock>
+              <RadioButton GroupName="Toilet">Yes</RadioButton>
+              <RadioButton GroupName="Toilet">No</RadioButton>
+          </WrapPanel>
+          <WrapPanel>
+              <TextBlock Width="100">LicensType</TextBlock>
               <TextBox></TextBox>
           </WrapPanel>
           <WrapPanel>
