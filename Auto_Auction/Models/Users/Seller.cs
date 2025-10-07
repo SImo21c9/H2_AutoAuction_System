@@ -14,18 +14,14 @@ namespace Auto_Auction.Models.Users
         }
         
 
-        //Custom notification method
-        public void SetNotificationMethod(Action<string> notification)
-        {
-            //Set the notification method
-            _notification = notification;
-        }
-
         //Method to receive bid notifications
         public void ReceiveBidNotification(string message)
         {
             //Invoke the notification method if set, it will otherwise just print to console
-            _notification?.Invoke((message));
+            if (_notification != null)
+            {
+                _notification.Invoke(message);
+            }
             //This is the fallback if no notification method is set
             if (_notification == null)
             {

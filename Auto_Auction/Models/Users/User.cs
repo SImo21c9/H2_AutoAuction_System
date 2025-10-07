@@ -16,6 +16,12 @@ namespace Auto_Auction.Models.Users
         public bool CanSell => this is Seller;
         public int ZipCode { get; set; }
         public decimal Balance { get; set; }
+        
+        public void Validate()
+        {
+            if (!Regex.IsMatch(UserName, @"^[A-Za-z0-9,-]{3,32}$"))
+                throw new ArgumentException("Invalid UserName. Must be 3–32 characters.");
+        }
 
         public User(int id, string userName, string password, int zipCode)
         {
@@ -39,11 +45,6 @@ namespace Auto_Auction.Models.Users
             return PasswordHasher.Verify(password, PasswordHash);
         }
 
-        public void Validate()
-        {
-            if (!Regex.IsMatch(UserName, @"^[A-Za-z0-9,-]{3,32}$"))
-                throw new ArgumentException("Invalid UserName. Must be 3–32 characters.");
-        }
 
         public override string ToString()
         {

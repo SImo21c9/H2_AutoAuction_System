@@ -50,7 +50,6 @@ public partial class MakeABidViewModel : ViewModelBase
             return false;
         }
 
-        // you can add more validation here if needed
         error = string.Empty;
         return true;
     }

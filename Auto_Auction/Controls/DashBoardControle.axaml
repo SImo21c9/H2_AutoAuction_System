@@ -85,6 +85,7 @@
             <Button Content="+ Set for sale" Width="120" Background="Green" Command="{Binding SetForSaleCommand}" />
             <Button Content="User profile" Width="120" Command="{Binding UserProfileCommand}"/>
             <Button Content="Bid History" Width="120" Command="{Binding BidHistoryCommand}"/>
+            <Button Content="Logout" Width="120" Command="{Binding LogoutCommand }"/>
         </StackPanel>
     </Grid>
 </UserControl>

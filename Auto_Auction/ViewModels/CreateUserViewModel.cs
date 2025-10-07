@@ -9,13 +9,13 @@ public partial class CreateUserViewModel : ViewModelBase
     private readonly MainWindowViewModel _mainViewModel;
     
     [ObservableProperty]
-    private string username = string.Empty;
+    private string _username = string.Empty;
     
     [ObservableProperty]
-    private string password = string.Empty;
+    private string _password = string.Empty;
     
     [ObservableProperty]
-    private string passwordAgain = string.Empty;
+    private string _passwordAgain = string.Empty;
 
     public CreateUserViewModel(MainWindowViewModel mainViewModel)
     {

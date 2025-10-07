@@ -29,15 +29,8 @@ namespace Auto_Auction.Models
             return auctionId;
         }
 
-        // --- SetForSale (with custom notification) ---
-        public int SetForSale(Vehicle vehicle, Seller seller, decimal minPrice, Action<string> notificationMethod)
-        {
-            var auctionId = SetForSale(vehicle, seller, minPrice);
-            seller.SetNotificationMethod(notificationMethod);
-            return auctionId;
-        }
 
-        // --- ReceiveBid ---
+        // ReceiveBid 
         public bool ReceiveBid(Buyer buyer, int auctionId, decimal amount)
         {
             if (!_auctions.TryGetValue(auctionId, out var auction)) return false;

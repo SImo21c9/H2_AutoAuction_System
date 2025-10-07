@@ -41,6 +41,12 @@ public partial class DashBoardViewModel : ViewModelBase
         _mainViewModel.NavigateToSetForSale();
     }
 
+    [RelayCommand]
+    private void Logout()
+    {
+        _mainViewModel.NavigateToLogin();
+    }
+
 
     [RelayCommand]
     private void YourAuctionsDoubleTapped(Auction auction)
